@@ -1,3 +1,4 @@
+
 var state = 0;
 /*
 * 0: Title page
@@ -8,9 +9,15 @@ var state = 0;
 */
 
 $(document).ready(function() {
+    alert("hello");
 	initializeTitle(); //Initialize page.
+    
+    $('#play-button').click(function(){
+    alert('play button has been clicked'); //Change this to move into next slide
+});
 });
 
 function initializeTitle() {
 	state++; //Progress onto next page once title is finished. This belogns in another function. 
 }
+

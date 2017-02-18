@@ -1,3 +1,24 @@
 body {
     background: #82d1ff;
+    font-family: 'Courier', sans-serif; /* Get a custom font and change this later! */
+    color: white;
+    font-size: 2em;
+    line-height: 1.6em;
+}
+
+#text {
+    width: 80%;
+    margin: 0 auto;
+    text-align: center
+}
+
+#play-button {
+    width: 180px;
+    height: 60px;
+    color: #ffffff;
+    text-align: center;
+    line-height: 2em; /* Center the text */ 
+    margin: 0 auto;
+    border: 6px solid white;
+    border-radius: 10px;
 }
