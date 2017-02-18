@@ -3,6 +3,9 @@ var dogIntro = "Meet Ruby! Ruby is a four year-old female pitbull. She was purch
 var lose = "Despite her good behavior and loving demeanor, Ruby was not adopted by any of her visitors - and she’s not the only one. Each year, animal shelters in the U.S. take in 7.6 million pets, and only about a third of them get adopted out. The remainder are either put down or left in overcrowded shelters and receive insufficient care and attention due to lack of human resources. Many people looking to become dog owners look to pet shops for younger, supposedly better-behaved dogs. These pet stores, however, often purchase their pets from puppy mills, where dogs are raised in cramped, filthy conditions and shipped across the country without adequate food, water, ventilation, or shelter - far from the ideal conditions for raising a well-behaved, happy pupper. ";
 var win = "Unfortunately, Ruby is one of the lucky ones. Each year, animal shelters in the U.S. take in 7.6 million pets, and only about a third of them get adopted out. The remainder are either put down or left in overcrowded shelters and receive insufficient care and attention due to lack of human resources. Many people looking to become dog owners look to pet shops for younger, supposedly better-behaved dogs. These pet stores, however, often purchase their pets from puppy mills, where dogs are raised in cramped, filthy conditions and shipped across the country without adequate food, water, ventilation, or shelter - far from the ideal conditions for raising a well-behaved, happy pupper.";
 var moreInfo = "test";
+var positiveResponses = ["Awww",  "So cute!", "Wow!", "That's great!", "Good dog!", "Amazing.", "Adorable!"];
+var negativeResponses = ["Bad dog!", "Ow!", "I knew sheltered dogs would be like this!", "I wouldn't want to be this dog's friend."
+						  , "It'd be hard to take care of this dog."];
 /*
 * 0: Title page
 * 1: Dog Intro
@@ -19,6 +22,7 @@ $(document).ready(function() {
 function initializeTitle() {
 	state = 0;
 	//Title image is already set, intro text is already set, and play button is showing.
+	$('#dog').hide();
 	
 	$('#continue-button').click(function(){
 		$('#continue-button').prop('disabled',true);
@@ -46,35 +50,65 @@ function initializeComplex() {
 	$('#title-and-dog').hide(); //Don't show icon.
 	$('#continue-button').hide(); 
 	$('#visitors').width(400); //Show visitor sidebar.
-	$('#visitors').text(dogIntro); //Temporary placeholder text.
+	$('#text').hide();
+	$('#dog').show(); //Show dog interface now. 
 	
-	/*Experimental countdown timer*/
-	var time = 2;
-	$('#text p').text(time);
-	var timer = setInterval(function(){
-		time--;
-		//If timer runs out, then initialize win page. 
-		if (time <= 0) {
-			clearInterval(timer);
-			initializeWinPage();
-		} else {
-			$('#text p').text(time);
+	var numCritics = 4;
+	var critic = 0;
+	/*
+	* 0 is Sarah
+	* 1 is Terrence
+	* 2 is Logan
+	* 3 is Tony
+	*/
+	$('#picture').text(critic);
+	var actionsLeft = 3; //3 starting actions for each critic. 
+	$('#lick').click(function() {
+		$('#comments p').text(positiveResponses[parseInt((Math.random() * positiveResponses.length), 10)]);
+		actionsLeft--;
+		if (actionsLeft < 0) {
+			if (critic + 1 >= numCritics) {
+				prepareResultPages();
+			}
+			actionsLeft = 3;
+			critic++;
+			$('#picture').text(critic);
 		}
-	},1000);
+	});
+	$('#roll').click(function() {
+		$('#comments p').text(positiveResponses[parseInt((Math.random() * positiveResponses.length), 10)]);
+	});
+	$('#wag').click(function() {
+		$('#comments p').text(positiveResponses[parseInt((Math.random() * positiveResponses.length), 10)]);
+	});
+	$('#bite').click(function() {
+		$('#comments p').text(negativeResponses[parseInt((Math.random() * negativeResponses.length), 10)]);
+	});
+	$('#sniff').click(function() {
+		$('#comments p').text(positiveResponses[parseInt((Math.random() * positiveResponses.length), 10)]);
+	});
+	$('#walk').click(function() {
+		$('#comments p').text(negativeResponses[parseInt((Math.random() * negativeResponses.length), 10)]);
+	});
 }
 
-function initializeWinPage() {
-	state = 3;
-	//Icon isn't shown.
-	$('#text p').text(win); //Change text to win text.
-	$('#text').show(); 
+function prepareResultPages() {
 	$('#visitors').hide();
+	$('#dog').hide();
 	$('#continue-button').show();
 	$('#continue-button').text("Get more information");
 	$('#continue-button').unbind();
 	$('#continue-button').click(function(){
 		initializeMoreInfo();
 	});
+	initializeWinPage();
+}
+
+function initializeWinPage() {
+	state = 3;
+	//Icon isn't shown.
+	$('#text p').text(win); //Change text to win text.
+	$('#text').show();
 }
 
 function initializeLosePage() {
@@ -82,13 +116,6 @@ function initializeLosePage() {
 	//Icon isn't shown.
 	$('#text p').text(lose); //Change text to lose text.
 	$('#text').show();
-	$('#visitors').hide();
-	$('#continue-button').show();
-	$('#continue-button').text("Get more information");
-	$('#continue-button').unbind();
-	$('#continue-button').click(function(){
-		initializeMoreInfo();
-	});
 }
 
 function initializeMoreInfo() {
