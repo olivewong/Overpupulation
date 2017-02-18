@@ -16,6 +16,7 @@ h1 {
     text-align: center;
     line-height: 1.2em;
     color: #ff7f9a;
+    margin-top: 0.8em;
 }
 
 #dog-pic {
@@ -89,14 +90,14 @@ h1 {
 }
 
 #dog-selection-panel {
-    height: 100px;
-    width: 500px;
+    height: 150px;
+    width: 750px;
     margin: 0 auto;
     margin-bottom: 1.5em;
     
 }
 #dog-selection-panel img {
-    height: 100px;
+    height: 150px;
     
 }
 
