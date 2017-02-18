@@ -8,8 +8,17 @@ body {
     line-height: 2em;
 }
 
-#title-and-dog {
-    margin-top: 20%;
+h1 {
+    font-weight: 500;
+    text-transform: lowercase;
+    font-size: 4.5em;
+    margin: 0 auto;
+    text-align: center;
+    line-height: 1.2em;
+    color: #ff7f9a;
+}
+
+#dog-pic {
     display: block;
     margin: auto;
     width: 50%;
