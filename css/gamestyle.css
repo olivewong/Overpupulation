@@ -6,13 +6,19 @@ body {
     line-height: 1.6em;
 }
 
+#title-and-dog {
+    display: block;
+    margin: auto;
+    width: 50%;
+}
+
 #text {
     width: 80%;
     margin: 0 auto;
     text-align: center
 }
 
-#play-button {
+#continue-button {
     width: 180px;
     height: 60px;
     color: #ffffff;
@@ -21,4 +27,12 @@ body {
     margin: 0 auto;
     border: 6px solid white;
     border-radius: 10px;
+}
+
+#visitors {
+	height: 100%;
+    width: 0px; /* Will set width in main.js */
+    position: fixed; /* Fixed position */
+    z-index: 1;
+    overflow-x: hidden;
 }
