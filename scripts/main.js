@@ -1,4 +1,4 @@
-function dog(intro, decisions, adoptionChance) {
+function Dog(intro, decisions, adoptionChance) {
 	this.intro = intro;
 	this.decisions = decisions;
 	this.adoptionChance = adoptionChance;
@@ -10,11 +10,11 @@ var lose = "Despite her good behavior and loving demeanor, Cooper was not adopte
 var win = "Unfortunately, Cooper is one of the lucky ones. Each year, animal shelters in the U.S. take in 7.6 million pets, and only about a third of them get adopted out. The remainder are either put down or left in overcrowded shelters and receive insufficient care and attention due to lack of human resources. Many people looking to become dog owners look to pet shops for younger, supposedly better-behaved dogs. These pet stores, however, often purchase their pets from puppy mills, where dogs are raised in cramped, filthy conditions and shipped across the country without adequate food, water, ventilation, or shelter - far from the ideal conditions for raising a well-behaved, happy pupper.";
 var moreInfo = "test";
 var positiveResponses = ["Awww",  "So cute!", "Wow!", "That's great!", "Good dog!", "Amazing.", "Adorable!"];
-var negativeResponses = ["Bad dog!", "Ow!", "I knew sheltered dogs would be like this!", "I wouldn't want to be this dog's friend."
-						  , "It'd be hard to take care of this dog."];
+var negativeResponses = ["Bad dog!", "Ow!", "I knew sheltered dogs would be like this!", "I wouldn't want to be this dog's friend.", "It'd be hard to take care of this dog."];
 
-var cooperDecisions = ["Unfortunately, Sarah decides not to adopt Cooper. Although Cooper is energetic, Sarah wants a younger dog, so she will go probably to go a pet store. This leaves many perfectly trainable and loveable dogs like Cooper stuck in shelters.", 			  "Sadly, Terrence decides not to adopt Cooper. He doesn’t like that Cooper is a pitbull, and wants to look for a different breed, probably purebred. Like many potential adopters, Terrence has misconceptions about pitbulls in general, even though many of them don’t have behavioral problems.", "Unfortunately, Logan decides not to adopt Cooper. She is scared that Cooper will have behavioral problems after being abandoned by her previous owners, and doesn’t want to deal with re-training an adopted dog. In reality, her belief in the saying “old dogs can’t learn new tricks” is totally unfounded. Dogs never stop learning, and even if Logan were to purchase a puppy, she would still have to train that puppy."];
+var cooperDecisions = ["Unfortunately, Sarah decides not to adopt Cooper. Although Cooper is energetic, Sarah wants a younger dog, so she will go probably to go a pet store. This leaves many perfectly trainable and loveable dogs like Cooper stuck in shelters.", "Sadly, Terrence decides not to adopt Cooper. He doesn’t like that Cooper is a pitbull, and wants to look for a different breed, probably purebred. Like many potential adopters, Terrence has misconceptions about pitbulls in general, even though many of them don’t have behavioral problems.", "Unfortunately, Logan decides not to adopt Cooper. She is scared that Cooper will have behavioral problems after being abandoned by her previous owners, and doesn’t want to deal with re-training an adopted dog. In reality, her belief in the saying “old dogs can’t learn new tricks” is totally unfounded. Dogs never stop learning, and even if Logan were to purchase a puppy, she would still have to train that puppy."];
 
+var myDog = new Dog(cooperIntro, cooperDecisions, 0);
 /*
 * 0: Title page
 * 1: Dog Intro
@@ -24,8 +24,8 @@ var cooperDecisions = ["Unfortunately, Sarah decides not to adopt Cooper. Althou
 * 5: More information page.
 */
 
-$(document).ready(function() {
-	var myDog = new dog(cooperIntro, cooperDecisions, 0);
+$(document).ready(function () {
+	
 	initializeTitle(); //Initialize title.
 });
 
@@ -34,7 +34,7 @@ function initializeTitle() {
 	//Title image is already set, intro text is already set, and play button is showing.
 	$('#dog').hide();
 	
-	$('#continue-button').click(function(){
+	$('#continue-button').click(function () { 
 		$('#continue-button').prop('disabled',true);
     	setTimeout(function(){
        		$('#continue-button').prop('disabled',false);
@@ -46,7 +46,7 @@ function initializeTitle() {
 function initializeDogIntro() {
 	state = 1;
 	$('#title-and-dog img').attr('src', "images/doggo.png"); //Set dog image.
-	$('#text p').text(mydog.intro); //Set dog intro text.
+	$('#text p').text(myDog.intro); //Set dog intro text.
 	//Play button is already showing.
 	
 	$('#continue-button').unbind(); //We need to unbind previous handlers, or else all handlers will be called.
