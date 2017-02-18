@@ -1,7 +1,10 @@
-function Dog(intro, decisions, adoptionChance) {
+function Dog(intro, decisions, adoptionChance, numCritics, critic, actionsLeft) {
 	this.intro = intro;
 	this.decisions = decisions;
 	this.adoptionChance = adoptionChance;
+    this.numCritics = numCritics;
+    this.critic = critic;
+    this.actionsLeft = actionsLeft;
 }
 
 var state = 0;
@@ -14,7 +17,7 @@ var negativeResponses = ["Bad dog!", "Ow!", "I knew sheltered dogs would be like
 
 var cooperDecisions = ["Unfortunately, Sarah decides not to adopt Cooper. Although Cooper is energetic, Sarah wants a younger dog, so she will go probably to go a pet store. This leaves many perfectly trainable and loveable dogs like Cooper stuck in shelters.", "Sadly, Terrence decides not to adopt Cooper. He doesn’t like that Cooper is a pitbull, and wants to look for a different breed, probably purebred. Like many potential adopters, Terrence has misconceptions about pitbulls in general, even though many of them don’t have behavioral problems.", "Unfortunately, Logan decides not to adopt Cooper. She is scared that Cooper will have behavioral problems after being abandoned by her previous owners, and doesn’t want to deal with re-training an adopted dog. In reality, her belief in the saying “old dogs can’t learn new tricks” is totally unfounded. Dogs never stop learning, and even if Logan were to purchase a puppy, she would still have to train that puppy."];
 
-var myDog = new Dog(cooperIntro, cooperDecisions, 0);
+var myDog;
 /*
 * 0: Title page
 * 1: Dog Intro
@@ -25,7 +28,7 @@ var myDog = new Dog(cooperIntro, cooperDecisions, 0);
 */
 
 $(document).ready(function () {
-	
+	myDog = new Dog(cooperIntro, cooperDecisions, 0, 4, 0, 3); //initialize dog object -- "cooper" to be changed
 	initializeTitle(); //Initialize title.
 });
 
@@ -45,7 +48,7 @@ function initializeTitle() {
 
 function initializeDogIntro() {
 	state = 1;
-	$('#title-and-dog img').attr('src', "images/doggo.png"); //Set dog image.
+	$('#dog-pic img').attr('src', "images/doggo.png"); //Set dog image.
 	$('#text p').text(myDog.intro); //Set dog intro text.
 	//Play button is already showing.
 	
@@ -57,7 +60,7 @@ function initializeDogIntro() {
 
 function initializeComplex() {
 	state = 2;
-	$('#title-and-dog').hide(); //Don't show icon.
+	$('#dog-pic').hide(); //Don't show icon.
 	$('#continue-button').hide(); 
 	$('#visitors').width(400); //Show visitor sidebar.
 	$('#text').hide();
@@ -73,7 +76,7 @@ function initializeComplex() {
 	*/
 	$('#picture').text(critic);
 	var actionsLeft = 3; //3 starting actions for each critic. 
-	$('#lick').click(function() {
+	$('#fetch').click(function() {
 		$('#comments p').text(positiveResponses[parseInt((Math.random() * positiveResponses.length), 10)]);
 		actionsLeft--;
 		if (actionsLeft < 0) {
@@ -92,12 +95,6 @@ function initializeComplex() {
 		$('#comments p').text(positiveResponses[parseInt((Math.random() * positiveResponses.length), 10)]);
 	});
 	$('#bite').click(function() {
-		$('#comments p').text(negativeResponses[parseInt((Math.random() * negativeResponses.length), 10)]);
-	});
-	$('#sniff').click(function() {
-		$('#comments p').text(positiveResponses[parseInt((Math.random() * positiveResponses.length), 10)]);
-	});
-	$('#walk').click(function() {
 		$('#comments p').text(negativeResponses[parseInt((Math.random() * negativeResponses.length), 10)]);
 	});
 }
