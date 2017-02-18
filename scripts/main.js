@@ -66,30 +66,23 @@ function initializeComplex() {
 	$('#text').hide();
 	$('#dog').show(); //Show dog interface now. 
 	
-	var numCritics = 4;
-	var critic = 0;
+	//var numCritics = 4;
+	//var critic = 0;
 	/*
 	* 0 is Sarah
 	* 1 is Terrence
 	* 2 is Logan
 	* 3 is Tony
 	*/
-	$('#picture').text(critic);
-	var actionsLeft = 3; //3 starting actions for each critic. 
+	$('#picture').text(myDog.critic);
+	//var actionsLeft = 3; //3 starting actions for each critic. 
 	$('#fetch').click(function() {
 		$('#comments p').text(positiveResponses[parseInt((Math.random() * positiveResponses.length), 10)]);
-		actionsLeft--;
-		if (actionsLeft < 0) {
-			if (critic + 1 >= numCritics) {
-				prepareResultPages();
-			}
-			actionsLeft = 3;
-			critic++;
-			$('#picture').text(critic);
-		}
+        updateDogOptions;
 	});
 	$('#roll').click(function() {
 		$('#comments p').text(positiveResponses[parseInt((Math.random() * positiveResponses.length), 10)]);
+        
 	});
 	$('#wag').click(function() {
 		$('#comments p').text(positiveResponses[parseInt((Math.random() * positiveResponses.length), 10)]);
@@ -99,6 +92,18 @@ function initializeComplex() {
 	});
 }
 
+function updateDogOptions() {
+    myDog.actionsLeft--;
+    console.log("actions left: " + myDog.actionsLeft + " critics left: " + myDog.numCritics);
+	if (myDog.actionsLeft < 0) {
+		if (myDog.critic + 1 >= myDog.numCritics) {
+	       prepareResultPages();
+		}
+		myDog.actionsLeft = 3;
+		myDog.critic++;
+        $('#picture').text(myDog.critic);
+	}
+}
 function prepareResultPages() {
 	$('#visitors').hide();
 	$('#dog').hide();
