@@ -137,7 +137,9 @@ function initializeLosePage() {
 
 function initializeMoreInfo() {
 	state = 5;
-	//Icon isn't shown.
 	$('#text p').text("More info.");
-	$('#continue-button').hide();
+	$('#continue-button').text("Play again.");
+	$('#continue-button').click(function() {
+		location.reload();
+	});
 }
