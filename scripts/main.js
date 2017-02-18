@@ -94,19 +94,23 @@ function initializeComplex() {
 	*/
 	$('#picture').text(myDog.critic);
 	$('#fetch').click(function() {
-		$('#comments p').text(positiveResponses[parseInt((Math.random() * positiveResponses.length), 10)]);
+		$('#comments p').html("<q>" + positiveResponses[parseInt((Math.random() * positiveResponses.length), 10)] + "</q>"
+							 + "<br>" + myDog.decisions[myDog.critic]);
         updateDogOptions();
 	});
 	$('#roll').click(function() {
-		$('#comments p').text(positiveResponses[parseInt((Math.random() * positiveResponses.length), 10)]);
+		$('#comments p').html("<q>" + positiveResponses[parseInt((Math.random() * positiveResponses.length), 10)] + "</q>"
+			+ "<br>" + myDog.decisions[myDog.critic]);
          updateDogOptions();
 	});
 	$('#wag').click(function() {
-		$('#comments p').text(positiveResponses[parseInt((Math.random() * positiveResponses.length), 10)]);
+		$('#comments p').html("<q>" + positiveResponses[parseInt((Math.random() * positiveResponses.length), 10)] + "</q>"
+							   + "<br>" + myDog.decisions[myDog.critic]);
          updateDogOptions();
 	});
 	$('#bite').click(function() {
-		$('#comments p').text(negativeResponses[parseInt((Math.random() * negativeResponses.length), 10)]);
+		$('#comments p').html("<q>" + negativeResponses[parseInt((Math.random() * negativeResponses.length), 10)] + "</q>"
+							   + "<br>" + myDog.decisions[myDog.critic]);
          updateDogOptions();
 	});
 }
@@ -122,7 +126,7 @@ function prepareResultPages() {
 	$('#visitors').hide();
 	$('#dog').hide();
 	$('#continue-button').show();
-	$('#continue-button').text("Get more information");
+	$('#continue-button').text("Take action");
 	$('#continue-button').unbind();
 	$('#continue-button').click(function(){
 		initializeMoreInfo();
