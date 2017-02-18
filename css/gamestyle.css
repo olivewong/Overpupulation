@@ -1,8 +1,10 @@
+@import url('https://fonts.googleapis.com/css?family=Rubik:300,500');
+@import url('https://fonts.googleapis.com/css?family=Karla:400,700');
+
 body {
-    background: #82d1ff;
-    font-family: 'Courier', sans-serif; /* Get a custom font and change this later! */
-    color: white;
-    font-size: 2em;
+    font-family: "Rubik", 'Courier', sans-serif; /* Get a custom font and change this later! */
+    color: #909090;
+    font-size: 1.5em;
     line-height: 1.6em;
 }
 
@@ -13,7 +15,8 @@ body {
 }
 
 #text {
-    width: 80%;
+    font-weight: 300;
+    width: 70%;
     margin: 0 auto;
     text-align: center
 }
@@ -21,7 +24,7 @@ body {
 #continue-button {
     width: 180px;
     height: 60px;
-    color: #ffffff;
+    color: #18CBF5;
     text-align: center;
     line-height: 2em; /* Center the text */ 
     margin: 0 auto;
