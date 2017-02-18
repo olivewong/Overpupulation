@@ -1,0 +1,80 @@
+aside {
+    display: block;
+    border: 2px solid #E7E7E7;
+    height: calc(100% - 100px);
+    width: calc(33% - 100px);
+    border-radius: 5em;
+    float: right;
+    top: 0;
+    right: 0px;
+    margin: 50px;
+    margin-left: 0;
+}
+
+aside img {
+    width: 150px;
+    margin: 2em auto;
+    display: block;
+}
+
+p {
+    font-size: 0.65em;
+    line-height: 2em;
+    font-weight: 300;
+    width: 70%;
+    margin: 0 auto;
+    text-align: center;
+}
+#next-button {
+    font-size: 0.9em;
+    text-align: center;
+    line-height: 2.2em;
+    text-transform: uppercase;
+    font-weight: 300;
+    letter-spacing: 1px;
+    margin: 0 auto;
+    margin-top: 1.5em;
+    color: #FF7F9A;
+    width: 100px;
+    height: 40px;
+    border: 1px solid #FF7F9A;
+    border-radius: 8px;
+}
+#pupper {
+    width: 300px;
+    margin: 0 auto;
+    margin-top: calc(50% - 150px);
+}
+#pupper img {
+    width: 300px;
+}
+#container {
+    position: fixed;
+    left: 0;
+    width: 66%;
+    height: 100%;
+}
+.action-button {
+    width: 120px;
+    height: 90px;
+    border: 1px solid #FFCDD7;
+    border-radius: 43px;
+}
+.action-button img {
+    top: 0;
+    margin: 0 auto;
+    width: 40px;
+    display: block;
+    margin-top: 10px;
+}
+.action-button span {
+    font-size: 0.7em;
+    text-align: center;
+    color: #FF7F9A;
+    line-height: 2.2em;
+    text-transform: uppercase;
+    font-weight: 500;
+    letter-spacing: 1px;
+    margin: 0 auto;
+    text-align: center;
+}
