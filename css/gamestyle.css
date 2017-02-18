@@ -31,6 +31,25 @@ h1 {
     text-align: center
 }
 
+#pick-a-pupper {
+    font-family: "Karla";
+    font-weight: 400;
+    letter-spacing: .15em;
+    text-transform: uppercase;
+    width: 145px;
+    height: 22px;
+    font-size: 19px;
+    text-align: center;
+    line-height: 22px;
+    letter-spacing: 1px;
+    line-height: 3em;
+    color: #A2E196;
+    margin: 0 auto;
+    padding-bottom: 1.2em;
+    border-bottom: 4px solid #A2E196;
+    margin-bottom: 1.5em;
+}
+
 #continue-button {
     width: 180px;
     height: 60px;
@@ -67,4 +86,16 @@ h1 {
     position: fixed; /* Fixed position */
     z-index: 1;
     overflow-x: hidden;
+}
+
+#dog-selection-panel {
+    height: 100px;
+    width: 500px;
+    margin: 0 auto;
+    margin-bottom: 1.5em;
+    
+}
+#dog-selection-panel img {
+    height: 100px;
+    
 }
