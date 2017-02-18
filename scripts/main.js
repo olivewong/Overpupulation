@@ -16,7 +16,7 @@ var positiveResponses = ["Awww",  "So cute!", "Wow!", "That's great!", "Good dog
 var negativeResponses = ["Bad dog!", "Ow!", "I knew sheltered dogs would be like this!", "I wouldn't want to be this dog's friend.", "It'd be hard to take care of this dog."];
 
 var cooperDecisions = ["Unfortunately, Sarah decides not to adopt Cooper. Although Cooper is energetic, Sarah wants a younger dog, so she will go probably to go a pet store. This leaves many perfectly trainable and loveable dogs like Cooper stuck in shelters.", "Sadly, Terrence decides not to adopt Cooper. He doesn’t like that Cooper is a pitbull, and wants to look for a different breed, probably purebred. Like many potential adopters, Terrence has misconceptions about pitbulls in general, even though many of them don’t have behavioral problems.", "Unfortunately, Logan decides not to adopt Cooper. She is scared that Cooper will have behavioral problems after being abandoned by her previous owners, and doesn’t want to deal with re-training an adopted dog. In reality, her belief in the saying “old dogs can’t learn new tricks” is totally unfounded. Dogs never stop learning, and even if Logan were to purchase a puppy, she would still have to train that puppy."];
-
+var dogChances = [0, 3, 5, 2, 2];
 var myDog;
 /*
 * 0: Title page
@@ -28,7 +28,11 @@ var myDog;
 */
 
 $(document).ready(function () {
-	myDog = new Dog(cooperIntro, cooperDecisions, 0, 4, 0, 3); //initialize dog object -- "cooper" to be changed
+    var startingActions = 3;
+    var totalCritics = 4;
+    var criticIndex = 0;
+    var randomChance = parseInt(Math.random() * 2, 10);
+	myDog = new Dog(cooperIntro, cooperDecisions, dogChances[0] + 5, totalCritics, criticIndex, startingActions); //initialize dog object -- "cooper" to be changed
 	initializeTitle(); //Initialize title.
 });
 
@@ -36,7 +40,7 @@ function initializeTitle() {
 	state = 0;
 	//Title image is already set, intro text is already set, and play button is showing.
 	$('#dog').hide();
-	
+	$('#dog-pic').hide();
 	$('#continue-button').click(function () { 
 		$('#continue-button').prop('disabled',true);
     	setTimeout(function(){
@@ -65,9 +69,6 @@ function initializeComplex() {
 	$('#visitors').width(400); //Show visitor sidebar.
 	$('#text').hide();
 	$('#dog').show(); //Show dog interface now. 
-	
-	//var numCritics = 4;
-	//var critic = 0;
 	/*
 	* 0 is Sarah
 	* 1 is Terrence
@@ -75,20 +76,23 @@ function initializeComplex() {
 	* 3 is Tony
 	*/
 	$('#picture').text(myDog.critic);
-	//var actionsLeft = 3; //3 starting actions for each critic. 
 	$('#fetch').click(function() {
 		$('#comments p').text(positiveResponses[parseInt((Math.random() * positiveResponses.length), 10)]);
-        updateDogOptions;
+        updateDogOptions();
 	});
 	$('#roll').click(function() {
 		$('#comments p').text(positiveResponses[parseInt((Math.random() * positiveResponses.length), 10)]);
-        
+         updateDogOptions();
 	});
 	$('#wag').click(function() {
 		$('#comments p').text(positiveResponses[parseInt((Math.random() * positiveResponses.length), 10)]);
+         updateDogOptions();
 	});
 	$('#bite').click(function() {
 		$('#comments p').text(negativeResponses[parseInt((Math.random() * negativeResponses.length), 10)]);
+         updateDogOptions();
+        myDog.adoptionChance -= 2;
+        console.log("chance: " + myDog.adoptionChance);
 	});
 }
 
