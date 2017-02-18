@@ -8,7 +8,9 @@ var state = 0;
 */
 
 $(document).ready(function() {
-        alert("jQuery popup!");
+	initializeTitle(); //Initialize page.
 });
-//comment
-//comment 2
+
+function initializeTitle() {
+	state++; //Progress onto next page once title is finished. This belogns in another function. 
+}
