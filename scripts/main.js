@@ -119,6 +119,7 @@ function initializeComplex() {
 	* 3 is Tony
 	*/
     
+    updateDots();
     var timeOutID = window.setTimeout(function() {
             $('#pupper img').attr('src', "images/still-pup.gif");
         },1000);
@@ -150,6 +151,7 @@ function initializeComplex() {
     $('#next-button').click(function() {
         //update text
         myDog.critic++;
+        updateDots();
         if (myDog.critic >= totalCritics) {
             prepareResultPages();
         } else {
@@ -160,6 +162,25 @@ function initializeComplex() {
             $('#instructions p').html("<br>" + criticNames[myDog.critic] + instructions);
         }
     });
+}
+
+function updateDots() {
+    switch (myDog.critic) {
+        case 0:
+            $('#dot1').css('background', '#5b5b5b');
+            break;
+        case 1:
+            $('#dot2').css('background', '#5b5b5b');
+            break;
+        case 2:
+            $('#dot3').css('background', '#5b5b5b');
+            break;
+        case 3:
+            $('#dot4').css('background', '#5b5b5b');
+            break;
+        default:
+            break;
+    }
 }
 
 function updateDogOptions() {
