@@ -82,11 +82,44 @@ h1 {
 }
 
 #visitors {
-	height: 100%;
-    width: 0px; /* Will set width in main.js */
-    position: fixed; /* Fixed position */
-    z-index: 1;
-    overflow-x: hidden;
+    display: block;
+    border: 2px solid #E7E7E7;
+    height: calc(100% - 100px);
+    width: calc(33% - 100px); /*width reset in main.js????????*/
+    border-radius: 5em;
+    float: right;
+    top: 0;
+    right: 0px;
+    margin: 50px;
+    margin-left: 0;
+}
+
+#visitors img {
+    width: 150px;
+    margin: 2em auto;
+    display: block;
+}
+#next-button {
+    font-size: 0.9em;
+    text-align: center;
+    line-height: 2.2em;
+    text-transform: uppercase;
+    font-weight: 300;
+    letter-spacing: 1px;
+    margin: 1.5em auto;
+    color: #FF7F9A;
+    width: 100px;
+    height: 40px;
+    border: 1px solid #FF7F9A;
+    border-radius: 8px;
+}
+#comments {
+    font-size: 0.65em;
+    line-height: 2em;
+    font-weight: 300;
+    width: 70%;
+    margin: 0 auto;
+    text-align: center;
 }
 
 #dog-selection-panel {
