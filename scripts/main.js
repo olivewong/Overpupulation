@@ -89,7 +89,7 @@ function generatePositiveComment() {
         $('#comments p').html("<br><b>" + "<q>" + positiveResponses[parseInt((Math.random() * positiveResponses.length), 10)] + "</q>" + "</b>" + "<br><br>" + "<span style='font-size: 12px;'>" + myDog.decisions[myDog.critic + 1] + "</span>");
     } else {
         $('#comments p').html("<br><b><q>" + positiveResponses[parseInt((Math.random() * positiveResponses.length), 10)] + "</q></b>"
-			 + "<br><br>" + "<span style='font-size: 12px;'>" + myDog.decisions[myDog.critic + 1] + "</span>");
+			 + "<br><br>" + "<span style='font-size: 12px;'>" + myDog.decisions[myDog.critic] + "</span>");
     }
     updateDogOptions();
 }
@@ -100,7 +100,7 @@ function generateNegativeComment() {
 			 + "<br><br>" + "<span style='font-size: 12px;'>" + myDog.decisions[myDog.critic + 1] + "</span>");
     } else {
         $('#comments p').html("<br><b><q>" + negativeResponses[parseInt((Math.random() * negativeResponses.length), 10)] + "</q></b>"
-			 + "<br><br>" + "<span style='font-size: 12px;'>" + myDog.decisions[myDog.critic + 1] + "</span>");
+			 + "<br><br>" + "<span style='font-size: 12px;'>" + myDog.decisions[myDog.critic] + "</span>");
     }
     updateDogOptions();
 }
