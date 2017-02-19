@@ -50,6 +50,7 @@ function findDogGivenName(name) {
 function initializeTitle() {
 	state = 0;
 	//Title image is already set, intro text is already set, and play button is showing.
+	$('#complexscene').hide();
 	$('#continue-button').hide();
 	$('#dog').hide();
 	$("#pick-a-pupper").hide();
@@ -68,7 +69,7 @@ function initializeDogIntro() {
 	state = 1;
 	$('#dog-selection-panel').hide();
 	$('#continue-button').show();
-	$('#dog-pic img').attr('src', "images/doggo.png"); //Set dog image.
+	$('#dog-pic img').attr('src', "images/still-pup.gif"); //Set dog image.
 	$('#dog-pic').show();
 	$('#text p').text(myDog.intro); //Set dog intro text.
 	//Play button is already showing.
@@ -80,19 +81,12 @@ function initializeDogIntro() {
 }
 
 function initializeComplex() {
-	var previousBodyHTML = $('body').html();
-	// alert('about to start loading ajax');
-	$.ajax({url: './complexscene.html'})
-	.done(function(response){
-		$('#main_game').css('display', 'none');
-		$('#current_game').html(response);
-	});
-
-	
 	state = 2;
+	$('#main_game').hide();
+	$('h1').hide();
+	$('#complexscene').show();
 	$('#dog-pic').hide(); //Don't show icon.
 	$('#continue-button').hide(); 
-	$('#visitors').width(400); //Show visitor sidebar.
 	$('#text').hide();
 	$('#dog').show(); //Show dog interface now. 
 	/*
@@ -107,7 +101,7 @@ function initializeComplex() {
 							 + "<br>" + myDog.decisions[myDog.critic]);
         updateDogOptions();
 	});
-	$('#roll').click(function() {
+	$('#roll-over').click(function() {
 		$('#comments p').html("<q>" + positiveResponses[parseInt((Math.random() * positiveResponses.length), 10)] + "</q>"
 			+ "<br>" + myDog.decisions[myDog.critic]);
          updateDogOptions();
@@ -136,8 +130,10 @@ function updateDogOptions() {
     $('#picture').text(myDog.critic);
 }
 function prepareResultPages() {
-	$('#visitors').hide();
+	$('#main_game').show();
+	$('#complexscene').hide();
 	$('#dog').hide();
+	$('h1').show();
 	$('#continue-button').show();
 	$('#continue-button').text("Take action");
 	$('#continue-button').unbind();
