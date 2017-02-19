@@ -74,6 +74,14 @@ h1 {
     margin: 0 auto;
     border: 1px solid #18CBF5;
     border-radius: 10px;
+    transition: all 0.3s ease;
+}
+
+
+#continue-button:hover {
+    background: #f7feff;
+    transition: all 0.3s ease;
+    cursor: pointer;  
 }
 
 .actions {
@@ -90,6 +98,7 @@ h1 {
     border: 1px solid #ffcdd7;
     border-radius: 10px;
 }
+
 
 #visitors, #adopt, #donate, #foster {
     border: 2px solid #E7E7E7; 
@@ -167,6 +176,13 @@ h1 {
     border: 1px solid #FF7F9A;
     border-radius: 8px;
 }
+
+#next-button:hover{
+     background: #ffeff2;
+    transition: all 0.3s ease;
+    cursor: pointer;  
+}
+
 #comments {
     font-size: 0.85em;
     line-height: 2em;
@@ -254,57 +270,48 @@ h1 {
 	top:85px;
 	left:440px;
 	background-color: #FFFFFF;
-	box-shadow: 3px 4px 9px 0 rgba(215,215,215,0.5);
 	border: 1px solid #FFCDD7;
 	border-radius: 43px;
 }
 
-#bite{
+#bite {
 	position:absolute;
 	top:610px;
 	left:440px;
-  background-color: #FFFFFF;
-	box-shadow: 3px 4px 9px 0 rgba(215,215,215,0.5);
+    background-color: #FFFFFF;
 	border: 1px solid #FFCDD7;
 	border-radius: 43px;
 }
 
-#wag{
+#wag {
 	position:absolute;
 	top:370px;
 	left:90px;
     background-color: #FFFFFF;
-	box-shadow: 3px 4px 9px 0 rgba(215,215,215,0.5);
 	border: 1px solid #FFCDD7;
 	border-radius: 43px;
-
 }
 
-#roll-over{
+#roll-over {
 	position:absolute;
 	left:740px;
 	top:370px;
     background-color: #FFFFFF;
-	box-shadow: 3px 4px 9px 0 rgba(215,215,215,0.5);
 	border: 1px solid #FFCDD7;
 	border-radius: 43px;
-}
-#container {
-    position: fixed;
-    left: 0;
-    width: 66%;
-    height: 100%;
 }
 .action-button {
     width: 120px;
     height: 90px;
     border: 1px solid #FFCDD7;
     border-radius: 43px;
+    box-shadow: 3px 4px 9px 0 rgba(215,215,215,0.5);
+    transition: all 0.3s ease!important;
 }
-
-
-
-
+.action-button: hover {
+    box-shadow: 3px 4px 9px 0 rgba(215, 215, 215, 1.0)!important;
+    cursor: pointer!important;
+}
 .action-button img {
     top: 0;
     margin: 0 auto;
@@ -324,6 +331,13 @@ h1 {
     margin: 0 auto;
     text-align: center;
 }
+#container {
+    position: fixed;
+    left: 0;
+    width: 66%;
+    height: 100%;
+}
+
 #dotsContainer {
     margin: 0 auto;
     width: 100px;
