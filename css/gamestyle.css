@@ -25,6 +25,8 @@ h1 {
     width: 15%;
 }
 
+
+
 #text {
     font-weight: 300;
     width: 70%;
@@ -59,7 +61,7 @@ h1 {
     color: #18CBF5;
     text-align: center;
     text-transform: uppercase;
-    line-height: 3em; /* Center the text */ 
+    line-height: 3em; /* Center the text */
     letter-spacing: .15em;
     margin: 0 auto;
     border: 1px solid #18CBF5;
@@ -73,7 +75,7 @@ h1 {
     text-transform: uppercase;
     font-weight: 400;
     text-align: center;
-    line-height: 3em; /* Center the text */ 
+    line-height: 3em; /* Center the text */
     letter-spacing: .15em;
     margin: 0 auto;
     color: #ff7f9a;
@@ -165,15 +167,17 @@ h1 {
     text-align: center;
 }
 #dog-selection-panel {
-    height: 150px;
-    width: 600px;
-    margin: 0 auto;
+    width: 750px;
+    height: 100px;
+    margin:0 auto;
     margin-bottom: 1.5em;
-    
 }
+
 #dog-selection-panel img {
     height: 150px;
-    
+    border-radius:50%;
+    box-shadow: 3px 4px 9px 0 rgba(215,215,215,0.5);
+    margin:15px;
 }
 
 .selected {
@@ -235,7 +239,7 @@ h1 {
 	position:absolute;
 	top:610px;
 	left:440px;
-    background-color: #FFFFFF;
+  background-color: #FFFFFF;
 	box-shadow: 3px 4px 9px 0 rgba(215,215,215,0.5);
 	border: 1px solid #FFCDD7;
 	border-radius: 43px;
@@ -249,7 +253,7 @@ h1 {
 	box-shadow: 3px 4px 9px 0 rgba(215,215,215,0.5);
 	border: 1px solid #FFCDD7;
 	border-radius: 43px;
-	
+
 }
 
 #roll-over{
@@ -273,6 +277,10 @@ h1 {
     border: 1px solid #FFCDD7;
     border-radius: 43px;
 }
+
+
+
+
 .action-button img {
     top: 0;
     margin: 0 auto;
