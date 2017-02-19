@@ -80,6 +80,15 @@ function initializeDogIntro() {
 }
 
 function initializeComplex() {
+	var previousBodyHTML = $('body').html();
+	// alert('about to start loading ajax');
+	$.ajax({url: './complexscene.html'})
+	.done(function(response){
+		$('#main_game').css('display', 'none');
+		$('#current_game').html(response);
+	});
+
+	
 	state = 2;
 	$('#dog-pic').hide(); //Don't show icon.
 	$('#continue-button').hide(); 
@@ -113,6 +122,10 @@ function initializeComplex() {
 							   + "<br>" + myDog.decisions[myDog.critic]);
          updateDogOptions();
 	});
+	//
+	$('#current_game').css('display', 'none');
+	$('#main_game').css('display', 'block');
+	console.log("#main_game");
 }
 
 function updateDogOptions() {

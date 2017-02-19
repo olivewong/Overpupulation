@@ -40,13 +40,49 @@ p {
     border: 1px solid #FF7F9A;
     border-radius: 8px;
 }
+
 #pupper {
     width: 300px;
     margin: 0 auto;
     margin-top: calc(50% - 150px);
 }
+
 #pupper img {
     width: 300px;
+	position:absolute;
+	top:250px;
+	left:330px;
+}
+
+#fetch {
+	position: absolute;
+	width: 141px;
+	height: 92.61px;
+	top:85px;
+	left:440px;
+	background-color: #FFFFFF;
+	box-shadow: 3px 4px 9px 0 rgba(215,215,215,0.5);
+	border: 1px solid #FFCDD7;
+	border-radius: 43px;
+}
+
+#bite{
+	position:absolute;
+	top:610px;
+	left:440px;
+}
+
+#wag{
+	position:absolute;
+	top:370px;
+	left:90px;
+	
+}
+
+#roll-over{
+	position:absolute;
+	left:740px;
+	top:370px;
 }
 #container {
     position: fixed;
@@ -68,6 +104,7 @@ p {
     margin-top: 10px;
 }
 .action-button span {
+	display:block;
     font-size: 0.7em;
     text-align: center;
     color: #FF7F9A;
