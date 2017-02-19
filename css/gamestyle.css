@@ -339,8 +339,20 @@ h1 {
 	background-color: #FFFFFF;
 	border: 1px solid #FFCDD7;
 	border-radius: 43px;
+    vertical-align: middle;
+  -webkit-transform: perspective(1px) translateZ(0);
+  transform: perspective(1px) translateZ(0);
+  -webkit-transition-duration: 0.3s;
+  transition-duration: 0.3s;
+  -webkit-transition-property: box-shadow, transform;
+  transition-property: box-shadow, transform;
 }
-
+#fetch:hover{
+    cursor: pointer;
+  box-shadow: 3px 4px 17px 0 rgba(215,215,215,0.5);
+  -webkit-transform: scale(1.05);
+  transform: scale(1.07);
+}
 #bite {
 	position:absolute;
 	top:610px;
@@ -348,17 +360,40 @@ h1 {
     background-color: #FFFFFF;
 	border: 1px solid #FFCDD7;
 	border-radius: 43px;
+    vertical-align: middle;
+  -webkit-transform: perspective(1px) translateZ(0);
+  transform: perspective(1px) translateZ(0);
+  -webkit-transition-duration: 0.3s;
+  transition-duration: 0.3s;
+  -webkit-transition-property: box-shadow, transform;
+  transition-property: box-shadow, transform;
 }
-
+#bite:hover{
+    cursor: pointer;
+  box-shadow: 3px 4px 17px 0 rgba(215,215,215,0.5);
+  -webkit-transform: scale(1.05);
+  transform: scale(1.07);
+}
 #wag {
 	position:absolute;
 	top:370px;
 	left:90px;
     background-color: #FFFFFF;
 	border: 1px solid #FFCDD7;
-	border-radius: 43px;
+	border-radius: 43px;vertical-align: middle;
+  -webkit-transform: perspective(1px) translateZ(0);
+  transform: perspective(1px) translateZ(0);
+  -webkit-transition-duration: 0.3s;
+  transition-duration: 0.3s;
+  -webkit-transition-property: box-shadow, transform;
+  transition-property: box-shadow, transform;
 }
-
+#wag:hover{
+    cursor: pointer;
+  box-shadow: 3px 4px 17px 0 rgba(215,215,215,0.5);
+  -webkit-transform: scale(1.05);
+  transform: scale(1.07);
+}
 #roll-over {
 	position:absolute;
 	left:740px;
@@ -366,6 +401,19 @@ h1 {
     background-color: #FFFFFF;
 	border: 1px solid #FFCDD7;
 	border-radius: 43px;
+    vertical-align: middle;
+  -webkit-transform: perspective(1px) translateZ(0);
+  transform: perspective(1px) translateZ(0);
+  -webkit-transition-duration: 0.3s;
+  transition-duration: 0.3s;
+  -webkit-transition-property: box-shadow, transform;
+  transition-property: box-shadow, transform;
+}
+#roll-over:hover{
+    cursor: pointer;
+  box-shadow: 3px 4px 17px 0 rgba(215,215,215,0.5);
+  -webkit-transform: scale(1.05);
+  transform: scale(1.07);
 }
 .action-button {
     width: 120px;
