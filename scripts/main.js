@@ -56,7 +56,6 @@ function initializeTitle() {
 	$('#continue-button').hide();
     $('#visitors').hide();
 	$('#dog').hide();
-	$("#pick-a-pupper").hide();
 	$('#dog-pic').hide();
 	$('.selection').click(function(){
 	   	myDog = findDogGivenName($(this).attr('id'));
@@ -70,6 +69,7 @@ function initializeTitle() {
 
 function initializeDogIntro() {
 	$('#dog-selection-panel').hide();
+    $("#pick-a-pupper").hide();
 	$('#continue-button').show();
 	$('#dog-pic img').attr('src', "images/still-pup.gif"); //Set dog image.
 	$('#dog-pic').show();
