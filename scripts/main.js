@@ -53,6 +53,7 @@ function findDogGivenName(name) {
 function initializeTitle() {
 	//Title image is already set, intro text is already set, and play button is showing.
 	$('#complexscene').hide();
+    $('#take-action').hide();
 	$('#continue-button').hide();
     $('#visitors').hide();
 	$('#dog').hide();
@@ -83,22 +84,23 @@ function initializeDogIntro() {
 }
 
 function generatePositiveComment() {
+    //If adopted.
     if (myDog.critic + 1 == totalCritics && result) {
-        $('#comments p').html("<b>" + "<q>" + positiveResponses[parseInt((Math.random() * positiveResponses.length), 10)] + "</q>" + "</b>" + "<br>" + myDog.decisions[myDog.critic + 1]);
+        $('#comments p').html("<br><b>" + "<q>" + positiveResponses[parseInt((Math.random() * positiveResponses.length), 10)] + "</q>" + "</b>" + "<br><br>" + "<span style='font-size: 12px;'>" + myDog.decisions[myDog.critic + 1] + "</span>");
     } else {
-        $('#comments p').html("<q>" + positiveResponses[parseInt((Math.random() * positiveResponses.length), 10)] + "</q>"
-			 + "<br>" + myDog.decisions[myDog.critic]);
+        $('#comments p').html("<br><b><q>" + positiveResponses[parseInt((Math.random() * positiveResponses.length), 10)] + "</q></b>"
+			 + "<br><br>" + "<span style='font-size: 12px;'>" + myDog.decisions[myDog.critic + 1] + "</span>");
     }
     updateDogOptions();
 }
 
 function generateNegativeComment() {
     if (myDog.critic + 1 == totalCritics && result) {
-        $('#comments p').html("<q>" + negativeResponses[parseInt((Math.random() * negativeResponses.length), 10)] + "</q>"
-			 + "<br>" + myDog.decisions[myDog.critic + 1]);
+        $('#comments p').html("<br><b><q>" + negativeResponses[parseInt((Math.random() * negativeResponses.length), 10)] + "</q></b>"
+			 + "<br><br>" + "<span style='font-size: 12px;'>" + myDog.decisions[myDog.critic + 1] + "</span>");
     } else {
-        $('#comments p').html("<q>" + negativeResponses[parseInt((Math.random() * negativeResponses.length), 10)] + "</q>"
-			 + "<br>" + myDog.decisions[myDog.critic]);
+        $('#comments p').html("<br><b><q>" + negativeResponses[parseInt((Math.random() * negativeResponses.length), 10)] + "</q></b>"
+			 + "<br><br>" + "<span style='font-size: 12px;'>" + myDog.decisions[myDog.critic + 1] + "</span>");
     }
     updateDogOptions();
 }
@@ -112,12 +114,6 @@ function initializeComplex() {
 	$('#dog').show(); //Show dog interface now. 
     $('#visitors').show(); //Show visitors now.
     $('#next-button').hide();
-	/*
-	* 0 is Sarah
-	* 1 is Terrence
-	* 2 is Logan
-	* 3 is Tony
-	*/
     
     updateDots();
     var timeOutID = window.setTimeout(function() {
@@ -179,7 +175,7 @@ function updateDots() {
             $('#dot4').css('background', '#5b5b5b');
             break;
         default:
-            break;
+            break; //hey
     }
 }
 
@@ -216,17 +212,20 @@ function prepareResultPages() {
 
 function initializeWinPage() {
 	//Icon isn't shown.
+    $('#title').html("Congratulations! " + "<br>" + myDog.name + " has been adopted!" + "</br>");
 	$('#text p').text(win); //Change text to win text.
 	$('#text').show();
 }
 
 function initializeLosePage() {
 	//Icon isn't shown.
+    $('#title').html("Oh no!" + "<br>" + myDog.name + " has not been adopted!" + "</br>");
 	$('#text p').text(lose); //Change text to lose text.
 	$('#text').show();
 }
 
 function initializeMoreInfo() {
+    $('#take-action').show();
 	$('#text p').text("More info.");
 	$('#continue-button').text("Play again.");
 	$('#continue-button').click(function() {
