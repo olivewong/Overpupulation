@@ -8,7 +8,7 @@
   <meta name="description" content="Best Friends Game">
 
   <link rel="stylesheet" href="css/gamestyle.css">
-	<link rel="stylesheet" href="css/complexscene.css">
+    <link rel="stylesheet" href="css/complexscene.css">
   <script src="scripts/jquery-3.1.1.js"></script>
   <script src="scripts/main.js"></script>
 
@@ -20,43 +20,15 @@
 </head>
 
 <body>
-	<div id="main_game">
-		<h1>Pupper Game</h1>
-
-		<div id="dog-pic">
-			<img src="images/still-pup.gif" />
-		</div>
-
-		<div id="text">
-			<p>Welcome to gameName! In this game, you try to help a shelter dog get adopted. Prospective new dog adopters will visit the shelter, and your job is to choose which actions the dog should take while interacting with each person. Click Play to meet your dog!</p>
-		</div>
-
-		<div id="target"></div>
-
-		<div id="pick-a-pupper">Pick a pupper</div>
-
-		<div id="dog-selection-panel">
-			<img id="cooper" class="selection" src="https://cdn.vectorstock.com/i/composite/99,20/cute-sleeping-dog-vector-3939920.jpg" />
-			<img id="luna" class="selection" src="https://cdn.vectorstock.com/i/composite/99,20/cute-sleeping-dog-vector-3939920.jpg" />
-			<img id="loki" class="selection" src="https://cdn.vectorstock.com/i/composite/99,20/cute-sleeping-dog-vector-3939920.jpg" />
-			<img id="ace" class="selection" src="https://cdn.vectorstock.com/i/composite/99,20/cute-sleeping-dog-vector-3939920.jpg" />
-			<img id="rufus" class="selection" src="https://cdn.vectorstock.com/i/composite/99,20/cute-sleeping-dog-vector-3939920.jpg" />
-		</div>
-
-		<div id="continue-button">Play!</div>
+	<div id="visitors">
+        <div id="instructions"><p></p></div>
+		<img src="images/still-pup.gif" />
+		<div id="comments"><p></p></div>
+        <div id="next-button">next ></div>
 	</div>
-	<div id="complexscene">
-	<aside>
-      <!-- Sidebar -->
-      <img src="images/doggo.png" />
-      <p>Sadly, Terrence decides not to adopt Cooper. He doesn’t like that Cooper is a pitbull, and wants to look for a different breed, probably purebred. Like many potential adopters, Terrence has misconceptions about pitbulls in general, even though many of them don’t have behavioral problems.</p>
-      <div id="next-button">next ></div>
-  	</aside>
-    
-  	<div id="container">
-      <!-- Left/main portion -->
+	<div id="dog">
       <div id="pupper">
-          <img class="icon" src="images/doggo.png" />
+          <img class="icon" src="images/still-pup.gif" />
       </div>
       
       <div class="action-button" id="fetch">
@@ -77,8 +49,30 @@
       <div class="action-button" id="wag">
           <img class="icon" src="images/icon.png" />
           <span>wag</span>
-	  </div>
-  	</div>
+      </div> 
 	</div>
+    <h1 id="title">Pupper Game</h1>
+    
+	<div id="dog-pic">
+        <img src="images/doggo.png" />
+    </div>
+	
+    <div id="text">
+        <p>Welcome to gameName! In this game, you try to help a shelter dog get adopted. Prospective new dog adopters will visit the shelter, and your job is to choose which actions the dog should take while interacting with each person. Click Play to meet your dog!</p>
+	</div>
+
+	<div id="pick-a-pupper">Pick a pupper</div>
+	
+    <div id="dog-selection-panel">
+        <img id="cooper" class="selection" src="https://cdn.vectorstock.com/i/composite/99,20/cute-sleeping-dog-vector-3939920.jpg" />
+        <img id="luna" class="selection" src="https://cdn.vectorstock.com/i/composite/99,20/cute-sleeping-dog-vector-3939920.jpg" />
+        <img id="loki" class="selection" src="https://cdn.vectorstock.com/i/composite/99,20/cute-sleeping-dog-vector-3939920.jpg" />
+        <img id="ace" class="selection" src="https://cdn.vectorstock.com/i/composite/99,20/cute-sleeping-dog-vector-3939920.jpg" />
+    </div>
+    
+    <div id="continue-button">Play!</div>
+    
+
+
 </body>
 </html>

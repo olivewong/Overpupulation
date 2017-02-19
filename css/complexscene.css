@@ -1,23 +1,4 @@
-aside {
-    display: block;
-    border: 2px solid #E7E7E7;
-    height: calc(100% - 100px);
-    width: calc(33% - 100px);
-    border-radius: 5em;
-    float: right;
-    top: 0;
-    right: 0px;
-    margin: 50px;
-    margin-left: 0;
-}
-
-aside img {
-    width: 150px;
-    margin: 2em auto;
-    display: block;
-}
-
-p {
+#comments p {
     font-size: 0.65em;
     line-height: 2em;
     font-weight: 300;
@@ -25,6 +6,7 @@ p {
     margin: 0 auto;
     text-align: center;
 }
+
 #next-button {
     font-size: 0.9em;
     text-align: center;
@@ -48,10 +30,10 @@ p {
 }
 
 #pupper img {
-    width: 300px;
+    width: 200px;
 	position:absolute;
 	top:250px;
-	left:330px;
+	left:400px;
 }
 
 #fetch {
@@ -70,12 +52,20 @@ p {
 	position:absolute;
 	top:610px;
 	left:440px;
+    background-color: #FFFFFF;
+	box-shadow: 3px 4px 9px 0 rgba(215,215,215,0.5);
+	border: 1px solid #FFCDD7;
+	border-radius: 43px;
 }
 
 #wag{
 	position:absolute;
 	top:370px;
 	left:90px;
+    background-color: #FFFFFF;
+	box-shadow: 3px 4px 9px 0 rgba(215,215,215,0.5);
+	border: 1px solid #FFCDD7;
+	border-radius: 43px;
 	
 }
 
@@ -83,6 +73,10 @@ p {
 	position:absolute;
 	left:740px;
 	top:370px;
+    background-color: #FFFFFF;
+	box-shadow: 3px 4px 9px 0 rgba(215,215,215,0.5);
+	border: 1px solid #FFCDD7;
+	border-radius: 43px;
 }
 #container {
     position: fixed;

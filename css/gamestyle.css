@@ -82,10 +82,11 @@ h1 {
 }
 
 #visitors {
+    position: absolute;
     display: block;
     border: 2px solid #E7E7E7;
     height: calc(100% - 100px);
-    width: calc(33% - 100px); /*width reset in main.js????????*/
+    width: calc(33% - 100px);
     border-radius: 5em;
     float: right;
     top: 0;
@@ -114,7 +115,7 @@ h1 {
     border-radius: 8px;
 }
 #comments {
-    font-size: 0.65em;
+    font-size: 0.85em;
     line-height: 2em;
     font-weight: 300;
     width: 70%;
@@ -122,9 +123,17 @@ h1 {
     text-align: center;
 }
 
+#instructions {
+    font-size: 0.75em;
+    line-height: 2em;
+    font-weight: 300;
+    width: 70%;
+    margin: 0 auto;
+    text-align: center;
+}
 #dog-selection-panel {
     height: 150px;
-    width: 750px;
+    width: 600px;
     margin: 0 auto;
     margin-bottom: 1.5em;
     
