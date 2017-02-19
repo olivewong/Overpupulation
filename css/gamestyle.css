@@ -22,7 +22,7 @@ h1 {
 #dog-pic {
     display: block;
     margin: auto;
-    width: 50%;
+    width: 10%;
 }
 
 #text {
@@ -146,4 +146,116 @@ h1 {
 .selected {
 	border: 2px solid #ff7f9a;
     border-radius: 3px;
+}
+
+#comments p {
+    font-size: 0.65em;
+    line-height: 2em;
+    font-weight: 300;
+    width: 70%;
+    margin: 0 auto;
+    text-align: center;
+}
+
+#next-button {
+    font-size: 0.9em;
+    text-align: center;
+    line-height: 2.2em;
+    text-transform: uppercase;
+    font-weight: 300;
+    letter-spacing: 1px;
+    margin: 0 auto;
+    margin-top: 1.5em;
+    color: #FF7F9A;
+    width: 100px;
+    height: 40px;
+    border: 1px solid #FF7F9A;
+    border-radius: 8px;
+}
+
+#pupper {
+    width: 300px;
+    margin: 0 auto;
+    margin-top: calc(50% - 150px);
+}
+
+#pupper img {
+    width: 200px;
+	position:absolute;
+	top:250px;
+	left:400px;
+}
+
+#fetch {
+	position: absolute;
+	width: 141px;
+	height: 92.61px;
+	top:85px;
+	left:440px;
+	background-color: #FFFFFF;
+	box-shadow: 3px 4px 9px 0 rgba(215,215,215,0.5);
+	border: 1px solid #FFCDD7;
+	border-radius: 43px;
+}
+
+#bite{
+	position:absolute;
+	top:610px;
+	left:440px;
+    background-color: #FFFFFF;
+	box-shadow: 3px 4px 9px 0 rgba(215,215,215,0.5);
+	border: 1px solid #FFCDD7;
+	border-radius: 43px;
+}
+
+#wag{
+	position:absolute;
+	top:370px;
+	left:90px;
+    background-color: #FFFFFF;
+	box-shadow: 3px 4px 9px 0 rgba(215,215,215,0.5);
+	border: 1px solid #FFCDD7;
+	border-radius: 43px;
+	
+}
+
+#roll-over{
+	position:absolute;
+	left:740px;
+	top:370px;
+    background-color: #FFFFFF;
+	box-shadow: 3px 4px 9px 0 rgba(215,215,215,0.5);
+	border: 1px solid #FFCDD7;
+	border-radius: 43px;
+}
+#container {
+    position: fixed;
+    left: 0;
+    width: 66%;
+    height: 100%;
+}
+.action-button {
+    width: 120px;
+    height: 90px;
+    border: 1px solid #FFCDD7;
+    border-radius: 43px;
+}
+.action-button img {
+    top: 0;
+    margin: 0 auto;
+    width: 40px;
+    display: block;
+    margin-top: 10px;
+}
+.action-button span {
+	display:block;
+    font-size: 0.7em;
+    text-align: center;
+    color: #FF7F9A;
+    line-height: 2.2em;
+    text-transform: uppercase;
+    font-weight: 500;
+    letter-spacing: 1px;
+    margin: 0 auto;
+    text-align: center;
 }

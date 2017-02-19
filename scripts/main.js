@@ -159,7 +159,6 @@ function initializeComplex() {
             actionOk = true;
             $('#next-button').hide();
             $('#instructions p').html("<br>" + criticNames[myDog.critic] + instructions);
-            //update animations
         }
     });
 }
@@ -178,8 +177,6 @@ function updateDogOptions() {
         $('#picture').text(myDog.critic);
     }
     actionOk = false;
-    
-    //insert animations here
 }
 function prepareResultPages() {
 	$('#dog').hide();
