@@ -84,8 +84,7 @@ function initializeDogIntro() {
 
 function generatePositiveComment() {
     if (myDog.critic + 1 == totalCritics && result) {
-        $('#comments p').html("<q>" + positiveResponses[parseInt((Math.random() * positiveResponses.length), 10)] + "</q>"
-			 + "<br>" + myDog.decisions[myDog.critic + 1]);
+        $('#comments p').html("<b>" + "<q>" + positiveResponses[parseInt((Math.random() * positiveResponses.length), 10)] + "</q>" + "</b>" + "<br>" + myDog.decisions[myDog.critic + 1]);
     } else {
         $('#comments p').html("<q>" + positiveResponses[parseInt((Math.random() * positiveResponses.length), 10)] + "</q>"
 			 + "<br>" + myDog.decisions[myDog.critic]);
