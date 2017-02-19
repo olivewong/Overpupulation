@@ -8,7 +8,8 @@
   <meta name="description" content="Best Friends Game">
 
   <link rel="stylesheet" href="css/gamestyle.css">
-    <link rel="stylesheet" href="css/complexscene.css">
+  <link rel="stylesheet" href="css/complexscene.css">
+  <link rel="stylesheet" href="css/tooltip.css">
   <script src="scripts/jquery-3.1.1.js"></script>
   <script src="scripts/main.js"></script>
 
@@ -70,10 +71,10 @@
 	<div id="pick-a-pupper">Pick a pupper</div>
 	
     <div id="dog-selection-panel">
-        <img id="cooper" class="selection" src="images/pup-portraits-03.png" />
-        <img id="luna" class="selection" src="images/pup-portraits-04.png" />
-        <img id="loki" class="selection" src="images/pup-portraits-01.png" />
-        <img id="ace" class="selection" src="images/pup-portraits-02.png" />
+        <a href="#" class="tooltip-bottom" data-tooltip="Cooper"><img id="cooper" data-tooltip="Cooper" class="selection" src="images/pup-portraits-03.png" /></a>
+        <a href="#" class="tooltip-bottom" data-tooltip="Luna"><img id="luna" data-tooltip="Luna" class="selection tooltip-bottom" src="images/pup-portraits-04.png" /></a>
+        <a href="#" class="tooltip-bottom" data-tooltip="Loki"><img id="loki" data-tooltip="Loki" class="selection tooltip-bottom" src="images/pup-portraits-01.png" /></a>
+        <a href="#" class="tooltip-bottom" data-tooltip="Ace"><img id="ace" data-tooltip="Ace" class="selection tooltip-bottom" src="images/pup-portraits-02.png" /></a>
     </div>
     
     <div id="continue-button">Play!</div>
