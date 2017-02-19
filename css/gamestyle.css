@@ -8,6 +8,15 @@ body {
     line-height: 2em;
 }
 
+a {
+    text-decoration: none;
+    color: inherit;
+}
+
+a:hover {
+    text-decoration: none;
+}
+
 h1 {
     font-weight: 500;
     text-transform: lowercase;
@@ -84,15 +93,15 @@ h1 {
 }
 
 #visitors, #adopt, #donate, #foster {
-    position: absolute;
-    display: block;
-    border: 2px solid #E7E7E7;
-    height: calc(100% - 100px);
-    width: calc(33% - 100px);
+    border: 2px solid #E7E7E7; 
     border-radius: 5em;
 }
 
 #visitors {
+    position: absolute;
+    display: block;
+    height: calc(100% - 100px);
+    width: calc(33% - 100px);
     float: right;
     top: 0;
     right: 0px;
@@ -100,29 +109,45 @@ h1 {
     margin-left: 0;
 }
 
-#adopt {
-    float: right;
-    top: 0;
-    right: 0px;
+#take-action {
+
+    text-align: center;
+    width = 100%;
+    margin: 0 auto;
+}
+
+#adopt, #donate, #foster {
+    display: inline-block;
+    height: 400px;
+    width: 250px;
     margin: 50px;
-    margin-left: 0;
+    padding: 19px;
+/*    font-size: 12px;*/
+/*    white-space: 15px;*/
+        font-size: 0.75em;
+    line-height: 2em;
+    font-weight: 300;
+}
+
+/*
+#adopt {
+    display: inline-block;
+    height: 400px;
+    width: 250px;
 }
 
 #donate {
-    float: right;
-    top: 0;
-    right: 0px;
-    margin: 50px;
-    margin-left: 0;
+    display: inline-block;
+    height: 400px;
+    width: 250px;
 }
 
-#faster {
-    float: right;
-    top: 0;
-    right: 0px;
-    margin: 50px;
-    margin-left: 0;
+#foster {
+    display: inline-block;
+    height: 400px;
+    width: 250px;
 }
+*/
 
 #visitors img {
     width: 150px;

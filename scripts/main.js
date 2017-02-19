@@ -8,7 +8,7 @@ function Dog(name, intro, decisions, adoptionChance, critic) {
 
 var lose = "Despite her good behavior and loving demeanor, Cooper was not adopted by any of her visitors, and she’s not the only one." + "<b> Each year, animal shelters in the U.S. take in 7.6 million pets, and only about a third of them get adopted. </b>" +  "The remainder are either put down, or left in overcrowded shelters and receive insufficient care and attention due to lack of human resources. Many people looking to become dog owners look to pet shops for younger, supposedly better-behaved dogs. These pet stores, however, often purchase their pets from puppy mills, where dogs are raised in cramped, filthy conditions and shipped across the country without adequate food, water, ventilation, or shelter - far from the ideal conditions for raising a well-behaved, happy puppy. Also, every sheltered dog does not fulfill the stereotype of the stubborn ill-behaved animal. According to a study in 2016 (Wallis, Veranyi, etc.), older dogs can still learn, albeit at a slower pace than younger dogs. Many adopters can also testify to the loyalty and love that sheltered pets have offered them throughout the years. Adopting a sheltered pet could easily be one of the most satisfying decisions one could make.";
 var win = "Cooper has been adopted! Unfortunately, Cooper is one of the lucky ones. <b> Each year, animal shelters in the U.S. take in 7.6 million pets, and only about a third of them get adopted. </b> The remainder are either put down, or left in overcrowded shelters and receive insufficient care and attention due to lack of human resources. Many people looking to become dog owners look to pet shops for younger, supposedly better-behaved dogs. These pet stores, however, often purchase their pets from puppy mills, where dogs are raised in cramped, filthy conditions and shipped across the country without adequate food, water, ventilation, or shelter - far from the ideal conditions for raising a well-behaved, happy puppy. Furthermore, every sheltered dog does not fulfill the stereotype of the stubborn ill-behaved animal. According to a study in 2016 (Wallis, Veranyi, etc.), older dogs can still learn, albeit at a slower pace than younger dogs. Many adopters can also testify to the loyalty and love that sheltered pets have offered them throughout the years.";
-var moreInfo = "Adopt sheltered pets instead of supporting puppy mills. Donate. Foster";
+var moreInfo = "Adopt sheltered pets instead of supporting puppy mills. Donate. Foster.";
 var positiveResponses = ["Awww",  "So cute!", "Wow!", "That's great!", "Good dog!", "Amazing.", "Adorable!"];
 var negativeResponses = ["Bad dog!", "Ow!", "I knew sheltered dogs would be like this!", "I wouldn't want to be this dog's friend.", "It'd be hard to take care of this dog."];
 var criticNames = ["Olivia", "Vanessa", "Heidi", "Daniel"];
@@ -227,9 +227,11 @@ function initializeLosePage() {
 function initializeMoreInfo() {
     $('#title').html("<span style='font-size: 40px;'>Ways to make a difference</span>");
     $('#take-action').show();
-	$('#text p').text(moreInfo);
-	$('#continue-button').text("Play again.");
+    $('#text').hide();
+	$('#continue-button').text("Back to home");
 	$('#continue-button').click(function() {
 		location.reload();
 	});
+    
+    
 }
